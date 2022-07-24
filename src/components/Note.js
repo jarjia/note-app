@@ -4,6 +4,7 @@ import './notes.css'
 const Note = ({item, handleDelete}) => {
   return (
     <div className='note'>
+        <h3 className='title'>{item.title}</h3>
         <p className='note-p'>{item.text}</p>
         <div className='root'>
             <span className='date'>{item.date}</span>
