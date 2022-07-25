@@ -9,7 +9,6 @@
 .note-p {
     font-family: sans-serif;
     padding: 5px;
-    background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
 }
 .root {
     display: flex;
