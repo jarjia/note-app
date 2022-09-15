@@ -5,14 +5,7 @@ import './app.css'
 import Note from './components/Note'
 
 const App = () => {
-    const [note, setNote] = useState([
-        {
-            id: nanoid(),
-            title: 'my Note',
-            text: 'My first note',
-            date: `${new Date().getMonth() + 1}/${new Date().getDate()}/${new Date().getFullYear()}`
-        }
-    ])
+    const [note, setNote] = useState([])
     const [textarea, setTextarea] = useState('')
     const [title, setTitle] = useState('')
     const [search, setSearch] = useState('')
@@ -68,6 +61,8 @@ const App = () => {
                         return item
                     }else if(item.title.toLowerCase().includes(search.toLowerCase())) {
                         return item
+                    }else {
+                        return null
                     }
                 }).map(item => {
                     return <Note item={item} key={item.id} handleDelete={handleDelete} search={search}/>
